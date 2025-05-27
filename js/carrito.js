@@ -15,7 +15,7 @@ function actualizarProducto (e) {
   //Si no hay tarjetas salgo de la función para evitar ejecutar la funcion cuando no hay tarjetas para evitar errores
   if (!card) return; 
 
-  let inputCantidad = card.querySelector(".input-cantidad").value;
+  let inputCantidad = card.querySelector(".input-cantidad");
   const idProducto = card.getAttribute("id");
   const prodSubtotal = card.querySelector(".subtotal");
   //Encuentro el producto en el carrito de compras y obtengo su index. Tuve que usar number porque el idProducto era un string
@@ -26,10 +26,10 @@ function actualizarProducto (e) {
       card.remove();
   } else if (target.classList.contains("btn-agregar")) {
     producto.count++;
-    inputCantidad = producto.count;
+    inputCantidad.value = producto.count;
   } else if (target.classList.contains("btn-quitar") && producto.count > 1) {
     producto.count--;
-    inputCantidad = producto.count;
+    inputCantidad.value = producto.count;
   }
 
   if(!target.classList.contains("eliminar")){
