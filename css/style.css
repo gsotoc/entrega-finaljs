@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;  
+    background-color: hsl(0, 0%, 87%);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+#cart {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main aside";
+  grid-template-columns: 2fr 1fr; /* Ajusta según lo ancho que quieras el aside */
+  gap: 20px; /* opcional, para separar */
+  width: 100%; /* asegúrate de que ocupe el ancho completo */
+}
+
+  nav {
+    grid-area: header;
+    height: 40px;
+  }
+
+  aside {
+  grid-area: aside;
+  position: sticky;
+  top: 0; 
+  align-self: start; 
+  height: 30vh;
+}
+
+main {
+  grid-area: main;
+  padding-left: 40%;
+}
+.vacio {
+  grid-area: none;
+}
+  
+nav {
+  display: flex;
+  width: 100%;
+  background-color: beige;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+article header {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+
+.cards {
+  max-height: 700px;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.card img {
+  max-height: 150px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.card .content {
+  padding: 0.5rem;
+}
+
+.card header {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+  
+.botonAgregar{
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input[type="number"] { 
+  max-width: 40px;
+}
+
+.totalcard {
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 230px;
+  padding-bottom: 15px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#total {
+  padding: 20px;
+}
+
+.btn {
+  display: flex;
+}
+
+button:hover{
+  transform: scale(1.2);
+}
+
+.totalcard p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#compraFinalizada{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  font-size: 20px;
+  width: 400px;
+  height: 200px;
+}

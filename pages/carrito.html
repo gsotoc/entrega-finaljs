@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body id="cart">
+    <nav>
+        <button><a href="../index.html">Ir a página inicial</a></button>
+        <div>
+            <label for="monedas">Elige una moneda:</label>
+            <select id="monedas">
+            <option value="USD">Dólar (USD)</option>
+            <option value="UYU">Peso Uruguayo (UYU)</option>
+            <option value="ARS">Peso Argentino (ARS)</option>
+            <option value="BRL">Real Brasileño (BRL)</option>
+            <option value="EUR">Euro (EUR)</option>
+            </select>
+        </div>
+    </nav>
+    <main>
+        <section id="carrito">
+            <h1>Tu carrito de Compras</h1>
+        </section>
+    </main>
+    <div class="vacio">
+
+    </div>
+    <aside class="totalcard">
+        <p>Su total es de:</p>
+        <div class="total">
+            <div id="total">
+            </div>
+            <div>
+                <button id="comprar">Comprar</button>
+            </div>
+        </div>
+        
+
+    </aside>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>
