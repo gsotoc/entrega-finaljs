@@ -15,7 +15,7 @@ function actualizarProducto (e) {
   //Si no hay tarjetas salgo de la función para evitar ejecutar la funcion cuando no hay tarjetas para evitar errores
   if (!card) return; 
 
-  const inputCantidad = card.querySelector(".input-cantidad").value;
+  let inputCantidad = card.querySelector(".input-cantidad").value;
   const idProducto = card.getAttribute("id");
   const prodSubtotal = card.querySelector(".subtotal");
   //Encuentro el producto en el carrito de compras y obtengo su index. Tuve que usar number porque el idProducto era un string
